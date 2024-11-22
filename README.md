@@ -4,7 +4,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Colección Adidas - ZapatoStyle</title>
+<title>ADIDAS Collection - ZapatoStyle</title>
 
 
 
@@ -20,9 +20,9 @@
 
 :root {
 
---adidas-blue: #0A294B;
+--adidas-blue: #0A3B7C;
 
---adidas-light: #f5f5f5;
+--adidas-black: #000000;
 
 }
 
@@ -30,7 +30,7 @@
 
 body {
 
-background: linear-gradient(135deg, var(--adidas-light) 0%, white 100%); font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+background: linear-gradient(135deg, #f5f5f5 0%, white 100%); font-family: 'Helvetica', Arial, sans-serif;
 
 }
 
@@ -38,7 +38,7 @@ background: linear-gradient(135deg, var(--adidas-light) 0%, white 100%); font-fa
 
 .navbar {
 
-background-color: var(--adidas-blue) !important;
+background-color: var(--adidas-black) !important;
 
 }
 
@@ -60,21 +60,41 @@ box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin-bottom: 20px;
 
 
 
-.product-image { height: 200px; object-fit: cover;
+.product-price {
 
-border-radius: 10px 10px 0 0;
+color: var(--adidas-blue); font-size: 1.25rem;
+
+font-weight: bold;
 
 }
 
 
 
-.price {
+.adidas-btn {
 
-color: var(--adidas-blue); font-weight: bold;
+background-color: var(--adidas-blue); color: white;
 
  
 
-font-size: 1.2em;
+border: none;
+
+}
+
+
+
+.adidas-btn:hover { background-color: #052a5c; color: white;
+
+}
+
+
+
+#cart-counter { position: relative; top: -10px;
+
+right: -5px;
+
+background-color: var(--adidas-blue); color: white;
+
+border-radius: 50%; padding: 2px 6px; font-size: 12px;
 
 }
 
@@ -82,7 +102,7 @@ font-size: 1.2em;
 
 .footer {
 
-background-color: var(--adidas-blue); color: white;
+background-color: var(--adidas-black); color: white;
 
 padding: 20px 0; margin-top: 40px;
 
@@ -90,11 +110,13 @@ padding: 20px 0; margin-top: 40px;
 
 
 
-.collection-header {
+.sale-badge { position: absolute; top: 10px;
 
-background: var(--adidas-blue); color: white;
+right: 10px;
 
-padding: 40px 0; margin-bottom: 40px;
+background-color: var(--adidas-blue); color: white;
+
+padding: 5px 10px; border-radius: 5px;
 
 }
 
@@ -106,17 +128,19 @@ padding: 40px 0; margin-bottom: 40px;
 
 
 
-<!-- Navbar -->
-
 <nav class="navbar navbar-expand-lg navbar-dark">
 
 <div class="container">
 
 <a class="navbar-brand" href="https://zapatostyle.com">
 
-<i class="fas fa-shoe-prints me-2"></i> ZapatoStyle
+<img src="https://images.unsplash.com/photo-1543508282-6319a3e2621f" alt="ADIDAS Logo, three stripes in white" width="40" height="40" class="d-inline-block align-text-top me-2">
+
+ADIDAS Collection
 
 </a>
+
+ 
 
 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
 
@@ -124,237 +148,301 @@ padding: 40px 0; margin-bottom: 40px;
 
 </button>
 
+
+
+<div class="collapse navbar-collapse" id="navbarNav">
+
+<ul class="navbar-nav me-auto">
+
+<li class="nav-item">
+
+<a class="nav-link" href="https://zapatostyle.com/adidas"><i class="fas fa-home"></i> Inicio</a>
+
+</li>
+
+<li class="nav-item">
+
+<a class="nav-link" href="https://zapatostyle.com/adidas/nuevos"><i class="fas fa-fire"></i> Nuevos Lanzamientos</a>
+
+</li>
+
+<li class="nav-item">
+
+<a class="nav-link" href="https://zapatostyle.com/adidas/deportivos"><i class="fas fa-running"></i> Deportivos</a>
+
+</li>
+
+</ul>
+
+
+
+<div class="cart-container">
+
+<button class="btn btn-outline-light">
+
+<i class="fas fa-shopping-cart"></i>
+
+<span id="cart-counter">0</span>
+
+</button>
+
+</div>
+
+</div>
+
 </div>
 
 </nav>
 
 
 
-<!-- Collection Header -->
+<div class="container mt-4">
 
-<div class="collection-header">
+<h1 class="text-center mb-4">Colección ADIDAS</h1>
 
-<div class="container text-center">
 
-<h1><i class="fab fa-adobe me-2"></i>Colección Adidas</h1>
 
-<p>Descubre nuestra exclusiva selección de tenis Adidas</p>
+<div class="row">
+
+<!-- Adidas Ultraboost -->
+
+<div class="col-md-4">
+
+<div class="product-card p-3">
+
+<div class="position-relative">
+
+<img src="https://images.unsplash.com/photo-1587563871167-1ee9c731aefb" alt="Adidas Ultraboost, premium running shoe" class="img-fluid mb-3" width="100%" height="300">
+
+<span class="sale-badge">Nuevo</span>
+
+</div>
+
+<h5>Adidas Ultraboost</h5>
+
+<p class="product-price">$179.99</p>
+
+<div class="d-flex justify-content-between">
+
+<select class="form-select w-50 me-2">
+
+ 
+
+<option>Talla 7</option>
+
+<option>Talla 8</option>
+
+<option>Talla 9</option>
+
+<option>Talla 10</option>
+
+</select>
+
+<button class="btn adidas-btn flex-grow-1">Añadir al carrito</button>
 
 </div>
 
 </div>
 
+</div>
 
 
-<!-- Products -->
+
+<!-- Adidas Superstar -->
+
+<div class="col-md-4">
+
+<div class="product-card p-3">
+
+<img src="https://images.unsplash.com/photo-1588361861040-ac9b1018f6d5" alt="Adidas Superstar, classic white with black stripes" class="img-fluid mb-3" width="100%" height="300">
+
+<h5>Adidas Superstar</h5>
+
+<p class="product-price">$89.99</p>
+
+<div class="d-flex justify-content-between">
+
+<select class="form-select w-50 me-2">
+
+<option>Talla 7</option>
+
+<option>Talla 8</option>
+
+<option>Talla 9</option>
+
+<option>Talla 10</option>
+
+</select>
+
+<button class="btn adidas-btn flex-grow-1">Añadir al carrito</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- Adidas NMD -->
+
+<div class="col-md-4">
+
+<div class="product-card p-3">
+
+<img src="https://images.unsplash.com/photo-1551116198-01d550c9809c" alt="Adidas NMD, modern streetwear design" class="img-fluid mb-3" width="100%" height="300">
+
+<h5>Adidas NMD</h5>
+
+<p class="product-price">$139.99</p>
+
+<div class="d-flex justify-content-between">
+
+<select class="form-select w-50 me-2">
+
+<option>Talla 7</option>
+
+<option>Talla 8</option>
+
+<option>Talla 9</option>
+
+<option>Talla 10</option>
+
+</select>
+
+<button class="btn adidas-btn flex-grow-1">Añadir al carrito</button>
+
+</div>
+
+</div>
+
+ 
+
+</div>
+
+
+
+<!-- Adidas Stan Smith -->
+
+<div class="col-md-4">
+
+<div class="product-card p-3">
+
+<img src="https://images.unsplash.com/photo-1603787081207-362bcef7c144" alt="Adidas Stan Smith, classic tennis shoe" class="img-fluid mb-3" width="100%" height="300">
+
+<h5>Adidas Stan Smith</h5>
+
+<p class="product-price">$79.99</p>
+
+<div class="d-flex justify-content-between">
+
+<select class="form-select w-50 me-2">
+
+<option>Talla 7</option>
+
+<option>Talla 8</option>
+
+<option>Talla 9</option>
+
+<option>Talla 10</option>
+
+</select>
+
+<button class="btn adidas-btn flex-grow-1">Añadir al carrito</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- Adidas Gazelle -->
+
+<div class="col-md-4">
+
+<div class="product-card p-3">
+
+<img src="https://images.unsplash.com/photo-1585232004423-244e0e6904e3" alt="Adidas Gazelle, retro suede sneaker" class="img-fluid mb-3" width="100%" height="300">
+
+<h5>Adidas Gazelle</h5>
+
+<p class="product-price">$99.99</p>
+
+<div class="d-flex justify-content-between">
+
+<select class="form-select w-50 me-2">
+
+<option>Talla 7</option>
+
+<option>Talla 8</option>
+
+<option>Talla 9</option>
+
+<option>Talla 10</option>
+
+</select>
+
+<button class="btn adidas-btn flex-grow-1">Añadir al carrito</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<footer class="footer">
 
 <div class="container">
 
 <div class="row">
 
-<!-- Ultraboost -->
-
 <div class="col-md-4">
 
  
 
-<div class="product-card">
+<h5>Contacto</h5>
 
-<img src="https://images.unsplash.com/photo-1587563871167-1ee9c731aefb" alt="Adidas Ultraboost 21, white colorway, lifestyle photo" class="img-fluid product-image">
+<p><i class="fas fa-phone"></i> +1 234 567 890</p>
 
-<div class="p-3">
-
-<h5>Adidas Ultraboost 21</h5>
-
-<p class="text-muted">Máxima amortiguación y retorno de energía</p>
-
-<div class="d-flex justify-content-between align-items-center">
-
-<span class="price">$180</span>
-
-<button class="btn btn-outline-dark">Agregar al carrito</button>
+<p><i class="fas fa-envelope"></i> adidas@zapatostyle.com</p>
 
 </div>
-
-</div>
-
-</div>
-
-</div>
-
-
-
-<!-- NMD -->
 
 <div class="col-md-4">
 
-<div class="product-card">
+<h5>Síguenos</h5>
 
-<img src="https://images.unsplash.com/photo-1582588678413-dbf45f4823e9" alt="Adidas NMD R1, black version, studio photography" class="img-fluid product-image">
+<a href="https://facebook.com/adidas" class="text-white me-3"><i class="fab fa-facebook"></i></a>
 
-<div class="p-3">
+<a href="https://instagram.com/adidas" class="text-white me-3"><i class="fab fa-instagram"></i></a>
 
-<h5>Adidas NMD R1</h5>
-
-<p class="text-muted">Estilo urbano con tecnología Boost</p>
-
-<div class="d-flex justify-content-between align-items-center">
-
-<span class="price">$140</span>
-
-<button class="btn btn-outline-dark">Agregar al carrito</button>
+<a href="https://twitter.com/adidas" class="text-white"><i class="fab fa-twitter"></i></a>
 
 </div>
-
-</div>
-
-</div>
-
-</div>
-
-
-
-<!-- Stan Smith -->
 
 <div class="col-md-4">
 
-<div class="product-card">
+<h5>Newsletter</h5>
 
-<img src="https://images.unsplash.com/photo-1603787081207-362bcef7c144" alt="Adidas Stan Smith, classic green accent, product shot" class="img-fluid product-image">
+<p>Recibe las últimas novedades de ADIDAS</p>
 
-<div class="p-3">
+<form class="d-flex">
 
-<h5>Adidas Stan Smith</h5>
+<input type="email" class="form-control me-2" placeholder="Tu email">
 
-<p class="text-muted">El clásico reinventado</p>
+<button class="btn adidas-btn">Suscribir</button>
 
-<div class="d-flex justify-content-between align-items-center">
-
-<span class="price">$85</span>
-
-<button class="btn btn-outline-dark">Agregar al carrito</button>
+</form>
 
 </div>
-
-</div>
-
-</div>
-
-</div>
-
- 
-
-<!-- Superstar -->
-
-<div class="col-md-4">
-
-<div class="product-card">
-
-<img src="https://images.unsplash.com/photo-1618666012174-83b441c0bc76" alt="Adidas Superstar, white with black stripes, classic view" class="img-fluid product-image">
-
-<div class="p-3">
-
-<h5>Adidas Superstar</h5>
-
-<p class="text-muted">Ícono del estilo urbano</p>
-
-<div class="d-flex justify-content-between align-items-center">
-
-<span class="price">$90</span>
-
-<button class="btn btn-outline-dark">Agregar al carrito</button>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-
-
-<!-- Forum -->
-
-<div class="col-md-4">
-
-<div class="product-card">
-
-<img src="https://images.unsplash.com/photo-1620794341491-76be6eeb6946" alt="Adidas Forum Low, vintage basketball inspired, side view" class="img-fluid product-image">
-
-<div class="p-3">
-
-<h5>Adidas Forum Low</h5>
-
-<p class="text-muted">Diseño retro con toque moderno</p>
-
-<div class="d-flex justify-content-between align-items-center">
-
-<span class="price">$100</span>
-
-<button class="btn btn-outline-dark">Agregar al carrito</button>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-
-
-<!-- ZX -->
-
-<div class="col-md-4">
-
-<div class="product-card">
-
-<img src="https://images.unsplash.com/photo-1621665421558-831f91fd0500" alt="Adidas ZX Series, modern running aesthetic, profile shot" class="img-fluid product-image">
-
-<div class="p-3">
-
-<h5>Adidas ZX Series</h5>
-
-<p class="text-muted">Innovación en running casual</p>
-
-<div class="d-flex justify-content-between align-items-center">
-
-<span class="price">$120</span>
-
-<button class="btn btn-outline-dark">Agregar al carrito</button>
-
-</div>
-
-</div>
-
-</div>
-
- 
-
-</div>
-
-</div>
-
-</div>
-
-
-
-<!-- Footer -->
-
-<footer class="footer">
-
-<div class="container text-center">
-
-<p>© 2024 ZapatoStyle - Colección Adidas</p>
-
-<div class="social-links">
-
-<a href="https://facebook.com" class="text-white me-3"><i class="fab fa-facebook"></i></a>
-
-<a href="https://instagram.com" class="text-white me-3"><i class="fab fa-instagram"></i></a>
-
-<a href="https://twitter.com" class="text-white"><i class="fab fa-twitter"></i></a>
 
 </div>
 
@@ -366,21 +454,47 @@ padding: 40px 0; margin-bottom: 40px;
 
 <script>
 
-document.querySelectorAll('.btn-outline-dark').forEach(button => { button.addEventListener('click', function() {
-
-this.innerHTML = '¡Agregado!'; this.classList.remove('btn-outline-dark'); this.classList.add('btn-success');
+let cartCount = 0;
 
 
 
-setTimeout(() => {
+document.querySelectorAll('.adidas-btn').forEach(button => { button.addEventListener('click', () => {
 
-this.innerHTML = 'Agregar al carrito'; this.classList.remove('btn-success'); this.classList.add('btn-outline-dark');
+if(button.textContent.includes('Añadir al carrito')) { cartCount++;
 
-}, 2000);
+document.getElementById('cart-counter').textContent = cartCount;
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
 
 });
 
 });
+
+ 
+
+const counter = document.getElementById('cart-counter'); counter.style.transform = 'scale(1.5)';
+
+setTimeout(() => { counter.style.transform = 'scale(1)';
+
+}, 200);
+
+ 
 
 </script>
 
