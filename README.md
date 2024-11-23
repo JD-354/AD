@@ -156,7 +156,7 @@ ADIDAS Collection
 
 <li class="nav-item">
 
-<a class="nav-link" href="https://jd-354.github.io/Z/"><i class="fas fa-home"></i> Inicio</a>
+<a class="nav-link" href="https://jd-354.github.io/z/"><i class="fas fa-home"></i> Inicio</a>
 
 </li>
 
