@@ -134,7 +134,7 @@ padding: 5px 10px; border-radius: 5px;
 
 <a class="navbar-brand" href="https://zapatostyle.com">
 
-<img src="https://images.unsplash.com/photo-1543508282-6319a3e2621f" alt="ADIDAS Logo, three stripes in white" width="40" height="40" class="d-inline-block align-text-top me-2">
+<img src="" alt="ADIDAS Logo, three stripes in white" width="40" height="40" class="d-inline-block align-text-top me-2">
 
 ADIDAS Collection
 
@@ -162,7 +162,7 @@ ADIDAS Collection
 
 <li class="nav-item">
 
-<a class="nav-link" href="https://zapatostyle.com/adidas/nuevos"><i class="fas fa-fire"></i> Nuevos Lanzamientos</a>
+<a class="nav-link" href="https://jd-354.github.io/N/"><i class="fas fa-fire"></i> Nuevos Lanzamientos</a>
 
 </li>
 
