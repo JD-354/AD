@@ -132,9 +132,9 @@ padding: 5px 10px; border-radius: 5px;
 
 <div class="container">
 
-<a class="navbar-brand" href="https://zapatostyle.com">
+<a class="navbar-brand" href="">
 
-<img src="" alt="ADIDAS Logo, three stripes in white" width="40" height="40" class="d-inline-block align-text-top me-2">
+<img src="https://images.unsplash.com/photo-1551116198-01d550c9809c" alt="ADIDAS Logo, three stripes in white" width="40" height="40" class="d-inline-block align-text-top me-2">
 
 ADIDAS Collection
 
